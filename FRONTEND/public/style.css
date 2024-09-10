@@ -487,7 +487,8 @@ footer ,p{
     }
     .phtop{
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         padding: 10px;
     }
