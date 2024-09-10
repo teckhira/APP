@@ -1,0 +1,92 @@
+/* src/style/CompanyHistory.css */
+
+.company-history {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #121212, #1c1c1c); /* Smooth gradient with a slightly lighter tone */
+  color: #e0e0e0; /* Light color for text for contrast */
+  text-align: center;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow for a floating effect */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.company-history::before,
+.company-history::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(65, 146, 228, 0.05); /* Light blue accent */
+}
+
+.company-history::before {
+  top: -80px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 80px rgba(65, 146, 228, 0.1); /* Soft glowing effect */
+  animation: pulse 12s ease-in-out infinite; /* Gentle pulse for a dynamic feel */
+}
+
+.company-history::after {
+  bottom: -80px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 80px rgba(65, 146, 228, 0.1); /* Soft glowing effect */
+  animation: pulse 12s ease-in-out infinite reverse; /* Opposite pulse for symmetry */
+}
+
+.company-history h2 {
+  font-size: 2.5rem; /* Smaller, yet prominent font size */
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Bright white for strong contrast */
+  position: relative;
+  z-index: 1;
+  font-family: 'Roboto', sans-serif; /* Clean, modern font */
+  font-weight: 500; /* Medium weight for a refined look */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px; /* Slight letter spacing for a refined appearance */
+  animation: fadeInUp 1s ease-out;
+}
+
+.company-history p {
+  font-size: 1rem; /* Smaller font size for a more subtle feel */
+  line-height: 1.6; /* Slightly increased line height for readability */
+  color: #d0d0d0; /* Soft grey for readability */
+  max-width: 1000px; /* Narrower container for a more focused look */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease-out 0.5s; /* Delayed fade-in for smooth appearance */
+  text-align: justify; /* Justified text for a cleaner look */
+  padding: 0 1rem; /* Padding for better text spacing */
+  font-family: 'Open Sans', sans-serif; /* Complementary font for body text */
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

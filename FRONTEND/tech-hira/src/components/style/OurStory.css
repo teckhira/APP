@@ -1,0 +1,70 @@
+/* src/style/OurStory.css */
+
+.our-story {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #121212, #1c1c1c); /* Dark gradient background for depth */
+  color: #e0e0e0; /* Light grey text for contrast */
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Deep shadow for a floating effect */
+  position: relative;
+  overflow: hidden;
+}
+
+.our-story::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2); /* Light accent for visual interest */
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.our-story::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2); /* Light accent for visual interest */
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.our-story h2 {
+  font-size: 3rem; /* Larger font size for headings */
+  margin-bottom: 2rem;
+  color: #ffffff; /* Pure white for strong contrast */
+  font-family: 'Poppins', sans-serif; /* Modern font family */
+  letter-spacing: 2px; /* Wider letter spacing for a sleek look */
+}
+
+.our-story p {
+  font-size: 1rem; /* Slightly larger font size for readability */
+  line-height: 1.6;
+  color: #d0d0d0; /* Soft grey for paragraph text */
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .our-story {
+    padding: 4rem 1.5rem;
+  }
+
+  .our-story h2 {
+    font-size: 2.5rem;
+  }
+
+  .our-story p {
+    font-size: 1.1rem;
+  }
+}

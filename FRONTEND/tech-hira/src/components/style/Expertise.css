@@ -1,0 +1,23 @@
+/* src/style/Expertise.css */
+
+.expertise {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #1e1e1e; /* Dark background for the section */
+  color: #e0e0e0; /* Light text color for contrast */
+}
+
+.expertise h3 {
+  font-size: 1.8rem;
+  color: #66b2ff; /* Light blue for headings */
+  margin-bottom: 20px;
+}
+
+.service-box {
+  margin-bottom: 20px;
+}
+
+.service-box h4 {
+  font-size: 1.3rem;
+  color: #4a90e2; /* Slightly darker blue for service titles */
+}

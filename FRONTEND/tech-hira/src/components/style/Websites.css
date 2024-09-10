@@ -1,0 +1,106 @@
+/* src/components/style/Websites.css */
+
+.service-websites {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #333333, #222831); /* Modern dark gradient for depth */
+  color: #e0e0e0; /* Light text for contrast */
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+  position: relative;
+  overflow: hidden;
+}
+
+.service-websites::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+}
+
+.service-websites h3 {
+  font-size: 2.4rem;
+  color: #00cfff; /* Bright cyan for a tech-forward look */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.service-websites h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00cfff, #004b77); /* Gradient underline for dynamic effect */
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.service-websites p {
+  font-size: 1.25rem;
+  color: #dddddd;
+  margin: 0 auto 2rem auto;
+  line-height: 1.8;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.service-websites ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.service-websites li {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly translucent background */
+  margin-bottom: 15px;
+  padding: 1.5rem;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-websites li:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  background-color: #00cfff; /* Bright cyan background on hover */
+  color: #222831; /* Dark text for contrast on hover */
+}
+
+.service-websites li::before {
+  content: '◉'; /* Circle bullet point for a modern look */
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #00cfff; /* Consistent accent color */
+}
+
+@media (max-width: 768px) {
+  .service-websites {
+    padding: 3rem 1rem;
+  }
+
+  .service-websites h3 {
+    font-size: 2rem;
+  }
+
+  .service-websites p {
+    font-size: 1.1rem;
+  }
+
+  .service-websites li {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

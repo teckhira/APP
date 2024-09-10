@@ -1,0 +1,21 @@
+/* ContactPage.css */
+.contact-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: #282828;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-page {
+      flex-direction: column;
+    }
+  
+    .contact-form,
+    .contact-details {
+      margin-right: 0;
+      margin-bottom: 0px; /* Add spacing between components on small screens */
+    }
+  }
+  

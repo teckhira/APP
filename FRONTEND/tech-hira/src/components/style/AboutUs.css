@@ -1,0 +1,178 @@
+.about-us {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Sleek dark background with subtle gradient */
+  color: #e0e0e0; /* Light text for contrast */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-out;
+}
+
+.about-us::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -150px;
+  width: 320px;
+  height: 320px;
+  background: rgba(65, 105, 225, 0.3); /* Royal Blue floating shape */
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite, shapeColorShiftBlue 12s linear infinite;
+}
+
+.about-us::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -130px;
+  width: 450px;
+  height: 450px;
+  background: rgba(65, 105, 225, 0.3); /* Royal Blue floating shape */
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite, shapeColorShiftBlue 14s linear infinite;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(44, 44, 44, 0.85); /* Glassmorphism effect with a dark tone */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 1.5s ease-out;
+}
+
+.about-us h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  animation: popUp 1.2s ease-out;
+  transition: color 0.3s ease;
+}
+
+.about-us h2:hover {
+  color: #00aaff; /* Bright Blue on hover */
+  transform: scale(1.1);
+}
+
+.about-us p {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: #c6c6c6;
+  margin-bottom: 40px;
+  z-index: 2;
+  position: relative;
+  animation: fadeUp 1.4s ease-out;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-us p:hover {
+  transform: translateY(-6px);
+  color: #b3e0ff; /* Light blue hover effect */
+}
+
+.read-more-btn {
+  padding: 14px 32px;
+  background-color: #00aaff; /* Bright Blue Button */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  position: relative;
+  animation: fadeIn 1.6s ease-out;
+}
+
+.read-more-btn:hover {
+  background-color: #007acc; /* Darker blue on hover */
+  transform: translateY(-6px) rotate(-3deg);
+}
+
+.read-more-btn:active {
+  animation: buttonWiggle 0.5s ease;
+}
+
+@keyframes buttonWiggle {
+  0%, 100% {
+    transform: translateY(-6px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-3deg);
+  }
+}
+
+@keyframes shapeColorShiftBlue {
+  0%, 100% {
+    background: rgba(65, 105, 225, 0.3);
+  }
+  50% {
+    background: rgba(0, 119, 255, 0.3); /* Lighter Blue transition */
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

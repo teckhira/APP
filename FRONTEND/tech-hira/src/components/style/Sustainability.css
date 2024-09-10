@@ -1,0 +1,25 @@
+/* src/style/Sustainability.css */
+
+.sustainability{
+  background-color: #1c1c1c; 
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #e0e0e0;
+  align-items: center;
+}
+
+.sustainability h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00aaff; /* Bright blue for the heading to stand out */
+}
+
+.sustainability p {
+
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  color: #b0b0b0; /* Medium grey for softer text */
+}

@@ -1,0 +1,164 @@
+/* src/components/Services.css */
+
+.services {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Dark gradient background */
+  color: #f0f0f0; /* Softer light grey */
+  text-align: center;
+  position: relative;
+}
+
+.services h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #ffffff; /* Pure white for heading */
+  position: relative;
+  animation: fadeIn 1s ease-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.services h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #00bfff; /* Bright blue for emphasis */
+  margin: 20px auto 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.services h2:hover::after {
+  transform: scaleX(1);
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  justify-content: center;
+  gap: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.service-item {
+  flex: 1 1 300px; /* Flex-basis to make items responsive */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent for a glassy effect */
+  backdrop-filter: blur(8px);
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.service-item:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3); /* Lifted shadow on hover */
+}
+
+.service-icon {
+  font-size: 4rem;
+  color: #00bfff; /* Brighter blue for icons */
+  margin-bottom: 20px;
+  animation: rotateIn 1.2s ease-out;
+}
+
+.service-item h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #00aaff; /* Blue for headings */
+  animation: fadeInUp 1s ease-out;
+}
+
+.service-item p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e0e0e0; /* Light grey for paragraph text */
+  animation: fadeInUp 1s ease-out 0.5s; /* Delayed animation */
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 191, 255, 0.15); /* Transparent bright blue circle */
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.service-item:hover::before {
+  transform: translate(30px, 30px) scale(1.2);
+  opacity: 0.8;
+}
+
+.service-item::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 240px;
+  height: 240px;
+  background-color: rgba(0, 191, 255, 0.1); /* Larger transparent blue circle */
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.service-item:hover::after {
+  transform: translate(-20px, -20px) scale(1.1);
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-360deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .services h2 {
+    font-size: 2.2rem;
+  }
+
+  .service-item {
+    flex: 1 1 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+  }
+}

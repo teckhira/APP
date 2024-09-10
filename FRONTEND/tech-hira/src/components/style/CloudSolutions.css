@@ -1,0 +1,101 @@
+/* src/components/style/CloudSolutions.css */
+
+.service-cloud-solutions {
+  padding: 4rem 2rem; /* Adjusted padding for a more balanced layout */
+  background: linear-gradient(135deg, #121212, #1b1b1b); /* Dark gradient background for modern look */
+  color: #e0e0e0; /* Light text color for readability */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7); /* Deeper shadow for more depth */
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px); /* Glassy effect for a sleek appearance */
+}
+
+.service-cloud-solutions::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px; /* Adjusted size for a subtle effect */
+  height: 300px;
+  background: radial-gradient(circle, rgba(102, 178, 255, 0.1), transparent); /* Soft blue glow */
+  border-radius: 50%;
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.service-cloud-solutions h3 {
+  font-size: 2.2rem; /* Slightly larger heading for emphasis */
+  color: #66b2ff; /* Light blue for headings */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700; /* Bold font weight for headings */
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.service-cloud-solutions h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px; /* Underline effect width */
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #66b2ff, #007bff); /* Gradient underline */
+  transform: translateX(-50%);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.service-cloud-solutions:hover h3::after {
+  width: 120px; /* Expands underline on hover */
+}
+
+.service-cloud-solutions p {
+  font-size: 1.3rem; /* Slightly larger font size for readability */
+  color: #b3b3b3; /* Light grey for body text */
+  max-width: 800px; /* Max width for better text alignment */
+  margin: 0 auto 2rem auto;
+  line-height: 1.7;
+  padding: 0 1.5rem;
+}
+
+.service-cloud-solutions ul {
+  margin-top: 2rem; /* Increased margin for better spacing */
+  list-style: none; /* Removed default bullets */
+  padding: 0;
+}
+
+.service-cloud-solutions li {
+  font-size: 1.1rem; /* Consistent font size for list items */
+  color: #e0e0e0; /* Light text color */
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border for separation */
+  padding-bottom: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.service-cloud-solutions li:hover {
+  background: rgba(102, 178, 255, 0.2); /* Light blue background on hover */
+  color: #66b2ff; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+  .service-cloud-solutions {
+    padding: 3rem 1rem; /* Adjusted padding for smaller screens */
+  }
+
+  .service-cloud-solutions h3 {
+    font-size: 1.8rem;
+  }
+
+  .service-cloud-solutions p {
+    font-size: 1rem;
+  }
+
+  .service-cloud-solutions li {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}

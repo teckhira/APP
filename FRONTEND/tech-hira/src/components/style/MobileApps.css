@@ -1,0 +1,125 @@
+/* src/components/style/MobileApps.css */
+
+.service-mobile-apps {
+  padding: 4rem 2rem; /* Spacious padding for a clean layout */
+  background: #121212; /* Deep dark background */
+  color: #e0e0e0; /* Light grey text for high contrast */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); /* Deep shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.service-mobile-apps::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px; /* Larger glow effect */
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 150, 255, 0.2), transparent); /* Soft blue glow effect */
+  border-radius: 50%;
+  filter: blur(120px); /* Soft, pronounced blur */
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.service-mobile-apps:hover::before {
+  transform: scale(1.1); /* Slightly scale the glow effect on hover */
+}
+
+.service-mobile-apps h3 {
+  font-size: 2.5rem; /* Larger font size for prominence */
+  color: #00aaff; /* Bright blue color for headings */
+  margin-bottom: 1rem;
+  font-weight: 700; /* Bold font weight */
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.service-mobile-apps h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 100px; /* Size of the underline */
+  height: 4px;
+  background: linear-gradient(90deg, #00aaff, #1e90ff, #00aaff); /* Animated gradient underline */
+  transform: translateX(-50%);
+  border-radius: 5px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.service-mobile-apps:hover h3::after {
+  width: 150px; /* Expand underline on hover */
+  background: linear-gradient(90deg, #00aaff, #1e90ff, #00aaff); /* More intense gradient on hover */
+}
+
+.service-mobile-apps p {
+  font-size: 1.3rem; /* Slightly larger font size */
+  color: #d0d0d0; /* Soft grey for paragraphs */
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.service-mobile-apps ul {
+  margin-top: 2rem; /* Space above list */
+  list-style: none; /* Removed default list bullets */
+  padding: 0;
+}
+
+.service-mobile-apps li {
+  font-size: 1.2rem; /* Larger font size for better readability */
+  color: #e0e0e0; /* Light grey for list items */
+  margin-bottom: 15px;
+  position: relative;
+  padding: 12px 20px;
+  border-radius: 10px; /* Rounded corners for list items */
+  background: rgba(0, 150, 255, 0.1); /* Light blue background for list items */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for list items */
+}
+
+.service-mobile-apps li:hover {
+  background: rgba(0, 150, 255, 0.2); /* Darker blue background on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+.service-mobile-apps li::before {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1.5rem; /* Larger checkmark */
+  color: #00aaff; /* Blue color for checkmark */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.service-mobile-apps li:hover::before {
+  color: #1e90ff; /* Change checkmark color on hover */
+}
+
+@media (max-width: 768px) {
+  .service-mobile-apps {
+    padding: 3rem 1rem; /* Adjusted padding for smaller screens */
+  }
+
+  .service-mobile-apps h3 {
+    font-size: 2rem; /* Adjust font size for headings */
+  }
+
+  .service-mobile-apps p {
+    font-size: 1.1rem; /* Adjust font size for paragraphs */
+  }
+
+  .service-mobile-apps li {
+    font-size: 1rem; /* Adjust font size for list items */
+    padding: 10px 15px; /* Adjust padding */
+  }
+}

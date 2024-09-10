@@ -1,0 +1,107 @@
+/* src/style/ContactForm.css */
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  background: #2e2e2e; /* Dark background for modern look */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+  margin-right: 20px; /* Spacing between the form and the details */
+  color: #e0e0e0; /* Light text color for readability */
+  max-width: 600px; /* Limiting width for better layout */
+  margin: 0 auto; /* Center the form */
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #66b2ff; /* Light blue for headings */
+  text-align: center; /* Centering the heading */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ccc; /* Light grey for labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%; /* Full width input fields */
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #444; /* Darker border for input fields */
+  border-radius: 4px;
+  font-size: 16px;
+  background: #1e1e1e; /* Dark background for inputs */
+  color: #e0e0e0; /* Light text color inside inputs */
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #66b2ff; /* Light blue border on focus */
+  box-shadow: 0 0 8px rgba(102, 178, 255, 0.8); /* Glowing focus effect */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing for textarea */
+  min-height: 50px; /* Minimum height for textarea */
+}
+
+.contact-form button {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Full width button */
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Slight shadow effect on hover */
+}
+/* src/style/ContactForm.css */
+
+.phone-input-container {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.phone-input-container .form-control {
+  background: #1e1e1e; /* Dark background for the input */
+  color: #e0e0e0; /* Light text color */
+  border: 1px solid #444;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 90%;
+}
+
+.phone-input-container .form-control:focus {
+  border-color: #66b2ff;
+  box-shadow: 0 0 8px rgba(102, 178, 255, 0.8); /* Glowing focus effect */
+}
+
+.phone-input-container .country-list {
+  background: #2e2e2e; /* Dark background for dropdown */
+  color: #e0e0e0; /* Light text color for country list */
+}
+
+.phone-input-container .country-list .country {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.phone-input-container .country-list .country:hover {
+  background: #444; /* Highlighting hovered country */
+}
+
+.phone-input-container .flag-dropdown {
+  background: #1e1e1e;
+  border: 1px solid #444;
+}

@@ -1,0 +1,28 @@
+.service-full-stack {
+  padding: 50px;
+  background-color: #2e2e2e; /* Light grey for a subtle background */
+}
+
+.service-full-stack h3 {
+  font-size: 2rem;
+  color: #66b2ff; /* Dark grey for the heading */
+  margin-bottom: 20px;
+}
+
+.service-full-stack p {
+  font-size: 1.2rem;
+  color: #bbbbbb; /* Medium grey for paragraph text */
+  line-height: 1.8;
+}
+
+.service-full-stack ul {
+  margin-top: 20px;
+  padding-left: 20px; /* Adds some spacing for the list */
+}
+
+.service-full-stack li {
+  font-size: 1.1rem;
+  color: #e6e6e6; /* Dark grey for list items */
+  margin-bottom: 10px;
+  list-style-type: disc; /* Clean list styling */
+}

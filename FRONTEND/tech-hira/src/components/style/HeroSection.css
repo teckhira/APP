@@ -1,0 +1,169 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto:wght@400&display=swap');
+
+/* Enhanced Hero Section */
+.hero {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  height: 90vh; /* Full viewport height for more impact */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(95, 180, 254, 0.5), rgba(0, 0, 0, 0.6)), url('../media/bg.mp4');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%) contrast(120%);
+  animation: fadeInBackground 4s ease-in-out forwards;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  max-width: 90%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s ease-out;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.hero-message {
+  font-family: 'Lora', serif;
+  font-size: 2rem; /* Larger font size for impact */
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin: 0 auto 30px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap; /* Ensure no wrapping */
+}
+
+.hero-message h2 {
+  display: inline-block;
+  position: relative;
+  width: 100%; /* Ensure full width for typewriter effect */
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text from wrapping */
+  border-right: 3px solid #00aaff; /* Typing cursor effect */
+  font-size: 2rem; /* Adjust font size if needed */
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.cta-btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem; /* Slightly larger button text */
+  font-weight: 500;
+  display: inline-block;
+  padding: 15px 30px; /* Increased padding for a bolder look */
+  background: linear-gradient(45deg, #00aaff, #0099e5); /* Gradient for a modern effect */
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 30px;
+  transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInButton 2s ease 3s forwards;
+  opacity: 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(45deg, #0099e5, #00aaff); /* Reversed gradient for hover */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.cta-btn:active {
+  transform: scale(0.95);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInBackground {
+  0% {
+    filter: brightness(40%) contrast(100%);
+  }
+  100% {
+    filter: brightness(60%) contrast(120%);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00aaff00;
+  }
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* Allow height to adjust for smaller screens */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Use full width of the screen */
+    padding: 15px;
+  }
+
+  .hero-message h2 {
+    font-size: 1.5rem; /* Smaller font size for better fit */
+    white-space: normal; /* Allow text wrapping */
+  }
+
+  .cta-btn {
+    font-size: 0.875rem;
+    padding: 12px 25px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,123 @@
+/* src/style/CoreValues.css */
+
+.core-values {
+  padding: 5rem 2rem; /* Increased padding for spacious feel */
+  background: radial-gradient(circle, #2e2e2e, #1e1e1e); /* Radial gradient background */
+  color: #e0e0e0; /* Light text color for contrast */
+  position: relative;
+  overflow: hidden; /* Ensure elements don’t overflow */
+}
+
+.core-values::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(65, 146, 228, 0.2); /* Light blue accent shape */
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite; /* Floating effect */
+  z-index: 0;
+}
+
+.core-values::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(65, 146, 228, 0.2);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse; /* Opposite floating effect */
+  z-index: 0;
+}
+
+.core-values h2 {
+  text-align: center;
+  font-size: 3rem; /* Larger font size for emphasis */
+  margin-bottom: 3rem; /* Increased margin for spacing */
+  color: #66b2ff; /* Light blue for headings */
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase; /* Uppercase for a strong impression */
+  letter-spacing: 2px; /* Spacing between letters for impact */
+  animation: fadeIn 1.5s ease-out;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.value-item {
+  background: #333; /* Dark background for each value item */
+  padding: 2rem;
+  border-radius: 12px; /* Slightly rounded corners */
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background: rgba(65, 146, 228, 0.1); /* Light blue overlay */
+  border-radius: 12px;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-10px) scale(1.05); /* Hover effect for depth */
+  background: #444; /* Slightly lighter background on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+.value-item:hover::before {
+  opacity: 0; /* Hide overlay on hover */
+}
+
+.value-item h3 {
+  font-size: 1.75rem; /* Slightly larger font size */
+  margin-bottom: 1.5rem; /* Increased margin for spacing */
+  color: #66b2ff; /* Light blue for item headings */
+  position: relative;
+}
+
+.value-item p {
+  font-size: 1.1rem; /* Slightly larger font size */
+  color: #ccc; /* Light grey for item text */
+  line-height: 1.6; /* Improved readability */
+  position: relative;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

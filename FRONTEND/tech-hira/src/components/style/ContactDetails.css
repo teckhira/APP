@@ -1,0 +1,26 @@
+/* src/style/ContactDetails.css */
+
+.contact-details {
+  flex: 1;
+  padding: 20px;
+  background: #1e1e1e; /* Dark background to match the theme */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for better contrast */
+  color: #e0e0e0; /* Light text color for readability */
+}
+
+.contact-details h2 {
+  margin-bottom: 20px;
+  color: #66b2ff; /* Light blue for headings */
+  font-size: 1.8rem; /* Slightly larger font for better emphasis */
+}
+
+.contact-details p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #b3b3b3; /* Light grey for body text */
+}
+
+.contact-details p strong {
+  color: #ffffff; /* Brighter color for emphasis */
+}

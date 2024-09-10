@@ -1,0 +1,37 @@
+/* src/style/CTA.css */
+
+.cta {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #1e1e1e; /* Dark background to match the modern theme */
+  color: #e0e0e0; /* Light text for contrast */
+}
+
+.cta h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f2f2f2; /* Softer white for heading */
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #b3b3b3; /* Light grey for paragraph text */
+}
+
+.cta-btn {
+  background-color: #333; /* Dark background for button */
+  color: #e0e0e0; /* Light text color */
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  font-size: 1.2rem;
+  border: 2px solid transparent; /* Border to be revealed on hover */
+}
+
+.cta-btn:hover {
+  background-color: #e0e0e0; /* Light background on hover */
+  color: #1e1e1e; /* Dark text color on hover */
+  border: 2px solid #1e1e1e; /* Dark border on hover */
+}
